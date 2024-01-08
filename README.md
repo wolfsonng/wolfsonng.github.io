@@ -1,6 +1,6 @@
 # Senior Engineering Manager
 
-#### Technical Skills: Mechanical Design, 3D Modeling, Electrical Circuitry, Firmware Development (Arduino IDE), MATLAB, ImageJ, SQL
+#### Skills: Mechanical Design, 3D Modeling, Electrical Circuitry, Firmware Development (Arduino IDE), MATLAB, ImageJ, SQL, Engineering Management. Program/Portfolio Management.
 
 ## Education
 - B.S Mechanical Engineering (2017)

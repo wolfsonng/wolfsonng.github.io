@@ -6,7 +6,7 @@
 - B.S Mechanical Engineering (2017)
 
 ## Work Experience
-**Senior Engineering Manager (Oct 2017 - Present)**
+**Senior Engineering Manager @ Sunvair Aerospace Group(Oct 2017 - Present)**
 - Played a pivotal role in guiding projects from inception to completion, significantly contributing to the organization's growth from 18 to over 135 employees.
 - Spearheaded cost-saving initiatives through reverse engineering, resulting in savings of millions of dollars and greatly impacting the company's financial health.
 - Instrumental in the strategic development and restructuring of the engineering department to align with the company's rapid expansion.
@@ -30,8 +30,8 @@
 -Collaborated with teams for delivering 3D modeled mechanical designs.
 
 ## Talks & Lectures
-- Leading through Crisis: Aerospace Industry Response to Pandemic - Mingo Aerospace, 2021
-- Innovation in Aerospace: Reverse Engineering and Cost Saving - Aerospace Conference, 2020
-- Product Development and Design Thinking - Engineering Symposium, 2019
-- Improving Mechanical Engineering Education - Teaching Assistant Conference, 2017
+- Leading through Crisis: Aerospace Industry Response to challenges - Vietnam Aero Summit, 2024
+- Innovation in Aerospace: Reverse Engineering and Cost Saving - MARPA Conference, 2020
+- Fluid Mechanic - Teaching Assistant, 2017
+- Heat Transfer - Teaching Assistant, 2017
 

@@ -2,9 +2,6 @@
 
 #### Engineering Design,  Engineering Management, Program/Portfolio Management.
 
-## Education
-- B.S Mechanical Engineering (2017)
-
 ## Work Experience
 **Senior Director of Engineering @ Sunvair Aerospace Group(Oct 2017 - Present)**
 - Played a pivotal role in guiding projects from inception to completion, significantly contributing to the organization's growth from 18 to over 165 employees at Oklahoma facility.

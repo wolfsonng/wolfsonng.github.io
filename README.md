@@ -1,13 +1,14 @@
-# Senior Engineering Manager
+# Senior Director of Engineering
 
-#### Skills: Mechanical Design, 3D Modeling, Electrical Circuitry, Firmware Development (Arduino IDE), MATLAB, ImageJ, SQL, Engineering Management. Program/Portfolio Management.
+#### Engineering Design,  Engineering Management, Program/Portfolio Management.
 
 ## Education
 - B.S Mechanical Engineering (2017)
 
 ## Work Experience
-**Senior Engineering Manager @ Sunvair Aerospace Group(Oct 2017 - Present)**
-- Played a pivotal role in guiding projects from inception to completion, significantly contributing to the organization's growth from 18 to over 135 employees.
+**Senior Director of Engineering @ Sunvair Aerospace Group(Oct 2017 - Present)**
+- Played a pivotal role in guiding projects from inception to completion, significantly contributing to the organization's growth from 18 to over 165 employees at Oklahoma facility.
+- Managing engineering activities of entire Group (4 Companies).
 - Spearheaded cost-saving initiatives through reverse engineering, resulting in savings of millions of dollars and greatly impacting the company's financial health.
 - Instrumental in the strategic development and restructuring of the engineering department to align with the company's rapid expansion.
 - Expertly managed and optimized multiple projects with a focus on cost analysis and process improvement, enhancing operational efficiency.

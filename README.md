@@ -1,9 +1,12 @@
-# Senior Director of Engineering
+
+# Senior Director of Engineering, Member Industry Advisory Council
 
 #### Engineering Design,  Engineering Management, Program/Portfolio Management.
 
 ## Work Experience
-**Senior Director of Engineering @ Sunvair Aerospace Group(Oct 2017 - Present)**
+#### **Member Industry Advisory Council (2024 - Present)**
+
+#### **Senior Director of Engineering @ Sunvair Aerospace Group (Oct 2017 - Present)**
 - Played a pivotal role in guiding projects from inception to completion, significantly contributing to the organization's growth from 18 to over 165 employees at Oklahoma facility.
 - Managing engineering activities of entire Group (4 Companies).
 - Spearheaded cost-saving initiatives through reverse engineering, resulting in savings of millions of dollars and greatly impacting the company's financial health.

@@ -1,6 +1,6 @@
-# John Anderson
+# Benjamin Nguyen
 **Senior Director of Engineering, Member Industry Advisory Council**  
-*Dallas, TX • 7+ Years Engineering Leadership*
+*OKLAHOMA • Years Engineering Leadership*
 
 Seasoned aerospace engineering executive with extensive experience in engineering design, management, and program/portfolio management. Currently serving on the Industry Advisory Council while leading comprehensive engineering operations that have driven significant organizational growth and cost savings.
 

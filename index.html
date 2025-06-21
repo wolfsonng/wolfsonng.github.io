@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benjamin Nguyen - Aerospace MRO Executive</title>
+    <meta name="description" content="Professional aerospace MRO executive with 25+ years of experience in maintenance operations, fleet management, and regulatory compliance.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Benjamin Nguyen - Aerospace MRO Executive">
+    <meta property="og:description" content="Seasoned aerospace MRO executive with expertise in maintenance operations and fleet management.">
+    <meta property="og:type" content="website">
+
+    <!-- Additional Meta Tags -->
+    <meta name="keywords" content="aerospace, MRO, maintenance, aviation, executive, operations, fleet management">
+    <meta name="author" content="Benjamin Nguyen">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="profile-section">
+                        <div class="profile-image">
+                            <img src="/assets/img/Headshot.png" alt="Professional Profile">
+                        </div>
+                        <div class="profile-info" id="profile-content">
+                            <!-- Profile content will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about">
+            <div class="container">
+                <div id="about-content">
+                    <!-- About content will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Timeline -->
+        <section class="timeline">
+            <div class="container">
+                <div id="career-content">
+                    <!-- Career content will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <div class="container">
+                <div id="contact-content">
+                    <!-- Contact content will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Function to format profile content specifically
+        async function loadProfile() {
+            try {
+                const response = await fetch('profile.md');
+                const markdown = await response.text();
+
+                // Parse the markdown
+                const lines = markdown.split('\n');
+                let name = '';
+                let title = '';
+                let location = '';
+                let summary = '';
+                let inSummary = false;
+
+                for (let line of lines) {
+                    if (line.startsWith('# ')) {
+                        name = line.replace('# ', '');
+                    } else if (line.startsWith('**') && line.includes('Senior Vice President')) {
+                        title = line.replace(/\*\*/g, '');
+                    } else if (line.startsWith('*') && line.includes('Dallas')) {
+                        location = line.replace(/\*/g, '');
+                    } else if (line.trim() && !line.startsWith('#') && !line.startsWith('**') && !line.startsWith('*') && !line.startsWith('-')) {
+                        if (!inSummary && line.length > 50) {
+                            summary = line;
+                            inSummary = true;
+                        }
+                    }
+                }
+
+                document.getElementById('profile-content').innerHTML = `
+                    <h1>${name}</h1>
+                    <p class="title">${title}</p>
+                    <p class="location">${location}</p>
+                    <div class="summary">
+                        <p>${summary}</p>
+                    </div>
+                `;
+            } catch (error) {
+                console.error('Error loading profile:', error);
+            }
+        }
+
+        // Function to format career timeline
+        async function loadCareer() {
+            try {
+                const response = await fetch('career.md');
+                const markdown = await response.text();
+
+                // Split by ## to get each job section
+                const sections = markdown.split('## ').filter(section => section.trim());
+                let timelineHTML = '<h2>Career Timeline</h2><div class="timeline-container">';
+
+                sections.forEach(section => {
+                    if (section.startsWith('# Career Timeline')) return;
+
+                    const lines = section.split('\n').filter(line => line.trim());
+                    if (lines.length < 3) return; // Skip if not enough content
+
+                    const dateRange = lines[0].trim();
+                    const jobTitle = lines[1]?.replace(/\*\*/g, '').trim() || '';
+                    const company = lines[2]?.replace(/\*/g, '').trim() || '';
+
+                    // Get description - everything after the empty line
+                    let description = '';
+                    let foundEmptyLine = false;
+                    for (let i = 3; i < lines.length; i++) {
+                        if (lines[i].trim() === '') {
+                            foundEmptyLine = true;
+                            continue;
+                        }
+                        if (foundEmptyLine || i === 4) { // Start collecting description after empty line or at line 4
+                            description += lines[i] + ' ';
+                        }
+                    }
+
+                    // If no description found after empty line, take everything after company
+                    if (!description.trim() && lines.length > 4) {
+                        description = lines.slice(4).join(' ');
+                    }
+
+                    timelineHTML += `
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">${dateRange}</div>
+                                <h3>${jobTitle}</h3>
+                                <h4>${company}</h4>
+                                <p>${description.trim()}</p>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                timelineHTML += '</div>';
+                document.getElementById('career-content').innerHTML = timelineHTML;
+            } catch (error) {
+                console.error('Error loading career:', error);
+            }
+        }
+
+        // Function to format contact section
+        async function loadContact() {
+            try {
+                const response = await fetch('contact.md');
+                const markdown = await response.text();
+                const html = marked.parse(markdown);
+
+                // Wrap in contact styling
+                document.getElementById('contact-content').innerHTML = `
+                    <h2>Get in Touch</h2>
+                    <div class="contact-content">
+                        <div class="contact-info">
+                            ${html}
+                        </div>
+                    </div>
+                `;
+            } catch (error) {
+                console.error('Error loading contact:', error);
+            }
+        }
+
+        // Load all content when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProfile();
+
+            // Load about section from profile.md (expertise and achievements)
+            fetch('profile.md')
+                .then(response => response.text())
+                .then(markdown => {
+                    const html = marked.parse(markdown);
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = html;
+
+                    const lists = tempDiv.querySelectorAll('ul');
+                    let aboutHTML = '<h2>About</h2><div class="about-content">';
+
+                    if (lists.length >= 2) {
+                        aboutHTML += `
+                            <div class="expertise">
+                                <h3>Core Expertise</h3>
+                                ${lists[0].outerHTML}
+                            </div>
+                            <div class="achievements">
+                                <h3>Key Achievements</h3>
+                                ${lists[1].outerHTML}
+                            </div>
+                        `;
+                    }
+
+                    aboutHTML += '</div>';
+                    document.getElementById('about-content').innerHTML = aboutHTML;
+                })
+                .catch(error => console.error('Error loading about:', error));
+
+            loadCareer();
+            loadContact();
+        });
+    </script>
+</body>
+</html>

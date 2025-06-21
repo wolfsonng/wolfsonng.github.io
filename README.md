@@ -1,38 +1,115 @@
+# Aerospace Executive Portfolio
 
-# Senior Director of Engineering, Member Industry Advisory Council
+A professional personal website for aerospace MRO executives that uses **Markdown files for easy content editing** - just like Jekyll themes! This works directly with GitHub Pages with no build process required.
 
-#### Engineering Design,  Engineering Management, Program/Portfolio Management.
+## Quick Setup
 
-## Work Experience
-#### **Member Industry Advisory Council (2024 - Present)**
+1. **Fork or download this repository**
+2. **Enable GitHub Pages**:
+   - Go to your repository settings
+   - Scroll to "Pages" section
+   - Select "Deploy from a branch"
+   - Choose "main" branch and "/ (root)" folder
+   - Save
 
-#### **Senior Director of Engineering @ Sunvair Aerospace Group (Oct 2017 - Present)**
-- Played a pivotal role in guiding projects from inception to completion, significantly contributing to the organization's growth from 18 to over 165 employees at Oklahoma facility.
-- Managing engineering activities of entire Group (4 Companies).
-- Spearheaded cost-saving initiatives through reverse engineering, resulting in savings of millions of dollars and greatly impacting the company's financial health.
-- Instrumental in the strategic development and restructuring of the engineering department to align with the company's rapid expansion.
-- Expertly managed and optimized multiple projects with a focus on cost analysis and process improvement, enhancing operational efficiency.
-- Led cross-functional teams in the technological advancement of electronic computer systems, improving system performance and reliability.
-- Successfully collaborated with FAA DER, ACO, and MIDO to ensure compliance and high standards in repair process documentation.
-- Delivered substantial financial gains by achieving over $2,000,000 in annual savings through innovative tooling design and product development.
-- Implemented advanced FMEA techniques, significantly enhancing product reliability and performance, and setting new benchmarks in engineering excellence.
+Your site will be live at: `https://yourusername.github.io/repository-name`
 
+## Easy Content Editing with Markdown
 
-**Teaching Assistant @ Oklahoma State University (Aug - Dec 2017)**
-- Assisted in grading and proctoring Heat Transfer and Fluid Mechanics courses.
+Just like Jekyll themes, you can edit your content using simple Markdown files:
 
-## Projects
-### [Fuel Injection Research in Supersonic Crossflow]
--Investigated fuel injection in supersonic crossflow for scramjet engines. 
--Developed software for image processing, enhancing computational efficiency and data analysis capabilities.
+### 📝 Edit Your Profile (`profile.md`)
+```markdown
+# Your Name
+**Your Job Title**  
+*Your Location • Years Experience*
 
-### [Design and Development of New Products]
--Engaged in the design and development of new products, including comprehensive research on various Airport Taxi systems. 
--Collaborated with teams for delivering 3D modeled mechanical designs.
+Your professional summary paragraph here...
 
-## Talks & Lectures
-- Leading through Crisis: Aerospace Industry Response to challenges - Vietnam Aero Summit, 2024
-- Innovation in Aerospace: Reverse Engineering and Cost Saving - MARPA Conference, 2020
-- Fluid Mechanic - Teaching Assistant, 2017
-- Heat Transfer - Teaching Assistant, 2017
+## Core Expertise
+- Your expertise area 1
+- Your expertise area 2
+- etc...
 
+## Key Achievements  
+- Your achievement 1
+- Your achievement 2
+- etc...
+```
+
+### 📅 Update Your Career (`career.md`)
+```markdown
+# Career Timeline
+
+## 2020 - Present
+**Your Current Job Title**  
+*Company Name*
+
+Description of your current role and achievements...
+
+## 2015 - 2020
+**Previous Job Title**  
+*Previous Company*
+
+Description of this role...
+```
+
+### 📞 Update Contact Info (`contact.md`)
+```markdown
+# Contact Information
+
+**Email:** your-email@email.com  
+**LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)  
+**Location:** Your City, State
+
+Your availability message here...
+```
+
+## Adding Your Profile Photo
+
+Edit `index.html` and find this line (around line 22):
+```html
+<img src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Professional Profile">
+```
+
+Replace with:
+1. **Upload your photo to the repository** (e.g., `profile.jpg`) and use: `<img src="profile.jpg" alt="Professional Profile">`
+2. **Or use another stock photo URL**
+
+## Features
+
+- ✅ **Edit content in Markdown** - just like Jekyll themes!
+- ✅ **No build process** - works directly with GitHub Pages
+- ✅ **Fully responsive** - looks great on all devices
+- ✅ **Professional design** - appropriate for executive-level presentation
+- ✅ **Timeline layout** - showcases career progression clearly
+- ✅ **SEO optimized** - includes proper meta tags
+- ✅ **Fast loading** - simple HTML/CSS with JavaScript for markdown parsing
+
+## File Structure
+
+```
+├── index.html          # Main page (rarely needs editing)
+├── styles.css          # Styling (rarely needs editing)
+├── profile.md          # ← Edit your profile info here
+├── career.md           # ← Edit your career timeline here
+├── contact.md          # ← Edit your contact info here
+└── README.md          # This file
+```
+
+## How It Works
+
+The site uses JavaScript to automatically load and display your Markdown files:
+- `profile.md` → Hero section and About section
+- `career.md` → Career timeline
+- `contact.md` → Contact section
+
+Just edit the `.md` files and push to GitHub - your changes appear immediately!
+
+## Deployment
+
+Simply push your changes to GitHub. The site will automatically update within a few minutes.
+
+## Support
+
+This system gives you the same easy editing experience as Jekyll themes, but with a completely custom design. Just edit the Markdown files to update your content and push to GitHub - no technical knowledge required!
